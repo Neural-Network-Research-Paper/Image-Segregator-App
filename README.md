@@ -1,4 +1,4 @@
-# 🦑 The X-Ray Categorization Challenge: A Game of Precision
+# 🦑 The X-Ray Categorization Challenge: A Game of Precision (Windows Edition)
 
 ## Welcome, Player. Your Mission, Should You Choose to Accept It.
 
@@ -10,15 +10,16 @@ Before you begin, ensure your environment is prepared. These are the essential c
 
 ### Python Dependencies: The Green Light
 
-To ensure the smooth operation of your categorization tool, you must install the necessary Python libraries. Open your terminal and execute the following commands. Consider this your first test of obedience.
+To ensure the smooth operation of your categorization tool, you must install the necessary Python libraries. Open your Command Prompt (CMD) or PowerShell and execute the following commands. Consider this your first test of obedience.
 
-```bash
-sudo apt-get update
-sudo apt-get install -y python3-tk
+```cmd
+REM Install Python (if not already installed) from python.org or Microsoft Store
+REM Ensure 'Add Python to PATH' is checked during installation.
+
 pip install Pillow requests
 ```
 
-*   `python3-tk`: This is the Tkinter library, essential for the graphical interface of your application. Without it, the game cannot begin.
+*   **Python and Tkinter**: Tkinter is usually included with standard Python installations. If you encounter issues, ensure you have a full Python installation (not just `python.exe`). You can download Python from [python.org](https://www.python.org/downloads/windows/).
 *   `Pillow`: This library handles image processing, allowing you to view and manipulate the X-Ray images. It's your window into the challenge.
 *   `requests`: This library is crucial for downloading the image batches from the GitHub repository. It's your lifeline to the game's resources.
 
@@ -30,17 +31,17 @@ Every game requires a meticulously prepared arena. Follow these steps precisely 
 
 Create a new folder on your machine. Name it `Image Segregator`. This will be your primary operational base.
 
-```bash
-mkdir "Image Segregator"
+```cmd
+md "Image Segregator"
 ```
 
 ### Step 2: The Inner Sanctums
 
 Within your `Image Segregator` folder, create two sub-folders: `image_folder` and `Categorized_XRays`. These are your staging and archiving zones.
 
-```bash
+```cmd
 cd "Image Segregator"
-mkdir image_folder Categorized_XRays
+md image_folder Categorized_XRays
 ```
 
 ### Step 3: The Command Center
@@ -51,8 +52,8 @@ Open the `Image Segregator` folder in your VS Code environment. This is where yo
 
 Inside the `Image Segregator` folder, create a new file named `download.py`.
 
-```bash
-touch download.py
+```cmd
+type nul > download.py
 ```
 
 ### Step 5: The Source of Truth
@@ -77,8 +78,8 @@ Observe the `batch1` at the end of the URL. Replace this with the specific batch
 
 Execute the `download.py` script. This will initiate the download of your assigned X-Ray image batch.
 
-```bash
-python3 download.py
+```cmd
+python download.py
 ```
 
 ### Step 9: The Verification Protocol
@@ -89,8 +90,8 @@ After the script completes, check your `image_folder`. Verify that your new imag
 
 Now, within your `Image Segregator` folder, create a new file named `Main.py`.
 
-```bash
-touch Main.py
+```cmd
+type nul > Main.py
 ```
 
 ### Step 11: The Core Program Transfer
@@ -101,8 +102,8 @@ From the GitHub repository, copy the code from the `Main.py` file and paste it i
 
 Run the `Main.py` script. The application window will appear, marking the official start of your challenge.
 
-```bash
-python3 Main.py
+```cmd
+python Main.py
 ```
 
 ### Step 13: The Categorization Trial
@@ -120,4 +121,5 @@ To embark on a new batch, return to Step 7. Modify the `api_url` in `download.py
 ### Step 16: The Relentless Pursuit
 
 After downloading the new batch, run your `Main.py` application again and continue the process of segregation. The challenge awaits, always.
+
 
